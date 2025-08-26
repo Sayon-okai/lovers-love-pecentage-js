@@ -26,7 +26,7 @@
 ### Links
 
 
-- Live Site URL: []
+- Live Site URL: [https://sayon-okai.github.io/lovers-love-pecentage-js/]
 
 ## My process
 

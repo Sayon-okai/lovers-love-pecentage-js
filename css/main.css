@@ -160,7 +160,11 @@ form input {
     text-align: center;
     cursor: pointer;
     background: none;
-    color: #6d7477;
+    color: #94cfe8;
+}
+
+input::placeholder {
+    color: #fff;
 }
 
 form input:active {
