@@ -1,41 +1,42 @@
-// // Selectors
-let submitBtn = document.getElementsByTagName('button');
-let resultScore  = document.querySelector('.score');
-let messageResult = document.querySelector('.message');
-let checkerName = document.getElementById("checker-name");
-
-// let allMessages = {
-//     'Your love for each other is like kanye love kanye',
-//     'Your love for each other is like diamond in dirt',
-    
-// }
 
 
 
-// submitBtn.addEventListener(click, () => {
-//     resultScore = resultScore * 100;
-// console.log(yourName,  "and",  loverName, "are great name for a great couple, your love score is:", + " " + Math.floor(loveScore) + "%")
-//     console.log('you have click the button')
-// } )
+function calculateLove() {
+    // Get names from input fields
+      let name1 = document.getElementById("name1").value.trim();
+     let name2 = document.getElementById("name2").value.trim();
+     
+     // check if input is provide 
+     if (name1 === '' || name2 === '') {
+          alert('Please enter both names')
+     }
+
+     // random number generator 0 to 100
+     let loveScore = Math.floor(Math.random() * 101)
+
+     document.getElementById('scoreBox').innerText = `${loveScore } %`;
 
 
-messageResult.textContent = checkerName.innerText;
+     // Display message base on percentage
 
+     if (loveScore >= 75) {
+          document.getElementById('messageBox').innerText = "Your love for each is like river that never runs dry"
 
-function updateScore() {
-    resultScore = Math.random(resultScore) * 100;
-    document.querySelector('.score').textContent = Math.floor(resultScore);
+      
 
-    document.querySelector('.message').innerHTML = document.getElementById('checker-name').textContent;
+     } else if (loveScore > 50 && loveScore < 74) {
+               document.getElementById('messageBox').innerText = "You guys have better chances of staying together"
 
+     }
+     
+     else if (loveScore < 50 && loveScore > 20) {
+              document.getElementById('messageBox').innerText = `Your relationship with ${name2} might not work `
 
-    
+     } else {
+            document.getElementById('messageBox').innerText = `Your relationship with ${name2} won't work, you have to quit `
+     }
 
-};
-
-
-
-
-
+      
+    }
 
 
