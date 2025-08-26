@@ -315,7 +315,7 @@ button:hover {
         /* Button */
         button {
             font-weight: 400;
-            font-size: 1em;
+            font-size: 0.6em;
             color: #fff;
             margin: 10px 0 5px 0;
             width: 60%;
@@ -345,6 +345,7 @@ button:hover {
       .result-message {
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       margin-top: 10px;
+      padding: 5px;
       font-size: .8em;
       color: #fff;
 }
