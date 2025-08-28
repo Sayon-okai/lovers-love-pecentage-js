@@ -6,20 +6,28 @@ function calculateLove() {
     
      let name1 = document.getElementById("name1").value.trim();
      let name2 = document.getElementById("name2").value.trim();
-     
 
       
      // validation
+ 
      if (name1 === '' || name2 === '' ) {
-          alert('Please enter both names');
+             alert('Please enter both names');
           
-          return;
+          return false;
 
           
-     }
+         }
+         else if (name1 === name2 || name2 === name1) {
+              alert('Please check your input correctly')
+
+              return false;
+         } else if (!isValidName(name1) || !isValidName(name2)) {
+           alert("Wrong input")
+         }
+          
      
      
-  
+
      // random number generator 0 to 100
      let loveScore = Math.floor(Math.random() * 101)
 
@@ -46,10 +54,23 @@ function calculateLove() {
 
 
 }
-       
-     
-     
+ 
 
+// Checking if name is valid
+
+function isValidName(value) {
+     if (!(typeof value === "string" || value instanceof string)) {
+          
+          return false;
+     }
+
+     // 2. Trim spaces
+     value = value.trim();
+
+     // 3. Check if it contains only letters (no numbers, no symbols)
+     
+     return /^[a-zA-Z]+$/.test(value)
+}
 
 
 
