@@ -9,7 +9,9 @@ function calculateLove() {
 
       
      // validation
- 
+     let transformName1 =  document.getElementById("name1").value.trim().toLowerCase();
+      let transformName2 = document.getElementById("name2").value.trim().toLowerCase();
+
      if (name1 === '' || name2 === '' ) {
              alert('Please enter both names');
           
@@ -17,7 +19,7 @@ function calculateLove() {
 
           
          }
-         else if (name1 === name2 || name2 === name1) {
+         else if (transformName1 === transformName2 || transformName2 === transformName1){
               alert('Please check your input correctly')
 
               return false;
