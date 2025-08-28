@@ -22,7 +22,9 @@ function calculateLove() {
 
               return false;
          } else if (!isValidName(name1) || !isValidName(name2)) {
-           alert("Wrong input")
+          alert("Wrong input")
+          
+          return false;
          }
           
      
